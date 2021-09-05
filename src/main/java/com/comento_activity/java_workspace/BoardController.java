@@ -30,6 +30,11 @@ public class BoardController {
 	public void listAll(Model model)throws Exception { // 메소드 인자값은 model 인터페이스(jsp전달 심부름꾼)
 		model.addAttribute("list",service.listAll()); // jsp에 심부름할 내역(서비스 호출)
 	}
+
+	@RequestMapping(value= "/regist", method = RequestMethod.GET) // 주소 호출 명시 . 호출하려는 주소 와 REST 방식설정 (GET)
+	public String regist()throws Exception {
+		return "regist";
+	}
 	
 	@RequestMapping(value = "/regist", method = RequestMethod.POST) // POST방식으로 내용 전송
 	public String registPOST(BoardVO board, RedirectAttributes rttr) throws Exception { // 인자값으로 REDIRECT 사용 	   

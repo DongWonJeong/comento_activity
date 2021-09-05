@@ -4,14 +4,14 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import org.apache.ibatis.session.SqlSession;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class BoardDAOImpl  implements BoardDAO {
 
 	@Inject
-	private SqlSession session;
+	private SqlSessionTemplate session;
 	private static String namespace = "com.myp.mapper.BoardMapper";
 	
 	@Override

@@ -27,10 +27,10 @@ where bno = #{bno}
 delete from tbl_board where bno =#{bno}
 </delete>
 
-<select id="listALl" resultType="com.sample.domain.BoardVO">
+<select id="listAll" resultType="com.sample.domain.BoardVO">
 <![CDATA[
 select
-	bon, title, content, writer, regdate, viewcnt
+	bno, title, content, writer, regdate, viewcnt
 from
 	tbl_board
 where bno > 0
